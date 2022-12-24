@@ -165,19 +165,19 @@ ul {
 .hero {
   background-color: var(--background-dark-color);
   text-align: center;
-  
+
 }
 
 .hero-title {
   padding-top: 192px;
   margin-bottom: 48px;
-  
+
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
- 
+
 }
 
 .hero>.container {
@@ -201,21 +201,20 @@ ul {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
-  background-color: var(--accent-color);
-  
-    /* display: flex;
-  align-items: center; */
+  background-color: var(--accent-color);  
 }
 
 /* ----Section 1 Our features----*/
 
 .section .container {
   padding-top: 120px;
-  padding-bottom: 120px;  
+  padding-bottom: 120px;
 }
+
 .section .container-features {
   padding-bottom: 0;
 }
+
 .visualy-hidden {
   position: absolute;
   width: 1px;
@@ -228,12 +227,10 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .features-list {
   display: block;
   display: flex;
-}
-.features-list >.item+.item {
-  margin-left: 24px;
 }
 
 .features-title {
@@ -242,16 +239,24 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;  
+  color: #2e2f42;
 }
-.features-title .item {
-  width: 264px;
+
+.features-list .item {
+  width: calc((100%-72px)/4);
+  margin-right: 24px;
 }
+
+.features-list .item:last-child {
+  margin-right: 0;
+}
+
 .features-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  text-align: left;
 }
 
 /*----- Section2 What are we doing---- */
@@ -264,43 +269,56 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--title-text-color);  
+  color: var(--title-text-color);
 }
 
 .our-work-list {
   display: flex;
 }
+
 .our-work-list .item+.item {
   margin-left: 24px;
 }
 
 /* ------Section 3 Our team------ */
 .team {
-  background-color: var(--background-light-color);  
+  background-color: var(--background-light-color);
 }
 
 .team-title {
   margin-bottom: 72px;
-
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
   color: var(--title-text-color);
-  
 }
+
 .team-list {
   display: flex;
+  align-items: center;
+  text-align: center;
 }
+
 .team-list .item {
   margin-right: 24px;
+  background-color: var(--second-accent-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
+
 .team-list .item:last-child {
   margin-right: 0;
 }
-.item-image {
-  flex-direction: ;
+
+.team-list .item-image {
+  flex-direction: row-reverse;
 }
+
+.team-contant {
+  margin-top: 32px;
+}
+
 .team-name {
   padding-bottom: 8px;
 
@@ -308,7 +326,6 @@ ul {
   line-height: 1.2;
   text-align: center;
   color: var(--team-name-color);
-  
 }
 
 .team-text {
@@ -318,15 +335,13 @@ ul {
   line-height: 1.5;
   text-align: center;
   color: var(--primary-text-color);
-  
 }
 
 /*--------- Footer------- */
 .footer {
-   padding-top: 100px;
+  padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--background-dark-color);
- 
 }
 
 .footer-logo {
@@ -341,7 +356,6 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f4fd;
-  
 }
 
 .footer-logo:hover,
@@ -354,6 +368,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
+  width: 264px;
+  justify-content: flex-start;
 }
 
 /*============== Portfolio======= */
@@ -363,8 +379,12 @@ ul {
 }
 
 .services-button {
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   display: flex;
@@ -375,6 +395,7 @@ ul {
   cursor: pointer;
   background-color: var(--background-light-color);
   border: 1px solid #e7e9fc;
+  border-radius: 4px;
 
 }
 
@@ -384,38 +405,57 @@ ul {
   background-color: var(--accent-color);
 }
 
-.section-title {
-  padding-top: 32px;
-
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--section-title-color);
- 
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
-.section-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  padding-top: 8px;
-}
-
-.types-ofservices {
+.servises-list {
   display: flex;
   flex-wrap: wrap;
   padding-top: 72px;
   padding-bottom: 120px;
 }
-.types-ofservices .item {
+
+.servises-list .item {
   width: 360px;
+  /* width: calc((100%-48)/3); */
   margin-right: 24px;
   margin-bottom: 48px;
+  border: 1px solid #E7E9FC;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
-.types-ofservices .item:nth-child(3n) {
+
+.servises-list .item:nth-child(3n) {
   margin-right: 0;
 }
-.types-ofservices .item:nth-last-child(-n+3) {
+
+.servises-list .item:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
+
+.section-title {
+  padding-top: 32px;
+  padding-left: 16px;
+  text-align: left;
+
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--section-title-color);
+
+}
+
+.section-text {
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 32px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
