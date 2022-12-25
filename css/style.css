@@ -37,6 +37,11 @@ ol {
   padding-left: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 1158px;
   padding-left: 15px;
@@ -421,7 +426,6 @@ ul {
   margin-bottom: 48px;
   border: 1px solid #E7E9FC;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
 }
 
 .servises-list .item:nth-child(3n) {
