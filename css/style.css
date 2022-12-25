@@ -311,10 +311,6 @@ ul {
   margin-right: 0;
 }
 
-.team-list .item-image {
-  flex-direction: row-reverse;
-}
-
 .team-contant {
   margin-top: 32px;
 }
